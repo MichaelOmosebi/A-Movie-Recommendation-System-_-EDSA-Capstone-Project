@@ -117,23 +117,29 @@ def main():
         st.title("EDA")
         st.write("Exploratory Data Analysis")
         st.info("This will be an exploration and explanation of the dataset used and insights derived respectively")
+        st.subheader('1) Genres distribution')
         st.image('resources/imgs/Distribution of genres.png',use_column_width=True)
-        st.markdown('Genres distribution')
+        st.markdown('Dramatic and comic movies seem to be most popular with the Film-noir and Imax being the least popular as observed in this movies sample data.')
         
-        st.image(r'resources/imgs/Ratings_per_day_of_the_week.jpeg',use_column_width=True)
-        st.markdown('Weekly ratings distribution')
+        st.subheader('2) Weekly ratings distribution')
+        st.image('resources/imgs/Ratings_per_day_of_the_week.jpeg',use_column_width=True)
+        st.markdown('Assuming ratings translate to viewership, from the graph we can see that viwership is at its peak during the weekend and lowest on Wednesday. Clearly Wednesday is a bad day to launch a new movie.')
         
+        st.subheader('3) Ratings per user distribution')
         st.image('resources/imgs/Top_rating_users.png',use_column_width=True)
-        st.markdown('Ratings per user distribution')
+        st.markdown("Movies is business and watching movies seems to be UserId - 72315's main business. His viewership rate by far exceeds the average viewer's capacity. We treated this exceptional customer as an outlier during the modelling process inorder to improve the model's accuracy.")
         
+        st.subheader('4) Top rated movies distribution')
         st.image('resources/imgs/Top_rated_movies.png',use_column_width=True)
-        st.markdown('Top rated movies distribution')
+        st.markdown("The ten top rated movies are movies from the 90's. It begs the question on whether the quality of movies has declined over the years or whether most of the customers are oldies who like to go back in time 😉🤔?")
         
+        st.subheader('5) Movie titles on word cloud')
         st.image('resources/imgs/Word_cloud.png',use_column_width=True)
-        st.markdown('Words distribution')
+        st.markdown('From the word cloud visualization of titles, some of the words that seem to stand out are; love, night, man, girl, life, world, movie, death etc this corresponds to what was seen earlier on genres distribution, that the most popular movies are daramatic and comic ones. ')
         
+        st.subheader('6) Average count per unique rating')
         st.image('resources/imgs/Average_count_per_rating.png',use_column_width=True)
-        st.markdown('Average count per rating')
+        st.markdown('From the graph we can see that most of the ratings seem to lie in the range of 3.0 - 5.0. From this we can tell that most customers tend to rate a movie if they liked it and rarely if they did not.')
 
     # Building out the "Meet The Team" page
     if page_selection == "Meet the Team":
@@ -145,13 +151,16 @@ def main():
 		# You can read a markdown file from supporting resources folder
         st.markdown("""
 		
-		Our team consists of 5 talented data scientists and developers from various parts of Africa. These are:
-		- Israel Ezema (Nigeria)
-		- Michael Omosebi  (Nigeria)
-		- Precious Orekha (Nigeria)
-		- Damilare Nughes  (Nigeria)
-		- Dorcas Solonka    (Kenya)
-		""")
+		Our team consists of 5 talented data scientists and developers from various parts of Africa.
+        You can reach out to anyone of them through the provided mails: """) 
+        
+        
+        st.write('Israel Ezema (Nigeria): ezysticks@aiinc.com')
+        st.write('Michael Omosebi  (Nigeria): omosebi@aiinc.com')
+        st.write('Precious Orekha (Nigeria): orekha@aiinc.com')
+        st.write('Damilare Nughes  (Nigeria): dare@aiinc.com')
+        st.write('Dorcas Solonka    (Kenya): dory@aiinc.com')
+		
 
 	# Building out the "About Us" page
     if page_selection == "About Us":
