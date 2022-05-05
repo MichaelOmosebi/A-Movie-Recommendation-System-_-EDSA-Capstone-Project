@@ -50,7 +50,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["AI Inc.","Recommender System","EDA","Solution Overview", "Meet the Team", "About Us"]
+    page_options = ["Recommender System","EDA","Solution Overview", "Meet the Team", "About Us"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -190,11 +190,7 @@ def main():
 		email: info@aiinc.com
 		""")
 
-    # Building out the "Home" page
-    if page_selection == "AI Inc.":
-        st.subheader("AI Inc.")
-		#Company logo
-        st.image('resources/imgs/AI_logo.jpg', caption='Photo Credit: Israel Ezema')
+
     
 
 
