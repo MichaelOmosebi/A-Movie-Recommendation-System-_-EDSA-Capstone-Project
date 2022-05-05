@@ -107,7 +107,16 @@ def main():
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
-        st.write("Describe your winning approach on this page")
+        st.markdown('We employed two methods of building recommmendation system:')
+        st.markdown('1. Content-based filtering')
+        st.markdown('2. Collaborative filtering')
+        st.markdown("The Content-Based Recommendation system computes similarity between movies based on movie genres using the selected movie as a baseline. Using this type of movie recommendation system, we require the title of the movie as input, but our sim_matrix is based on the index of each movie. Therefore, to build this, we need to convert movie title into movie index and movie index into movie title. Let's create functions which operate those functions.")
+        st.markdown("Collaborative methods for recommender systems are methods that are based solely on the past interactions recorded between users and items in order to produce new recommendations. These methods do not require item meta-data like their content-based counterparts. This makes them less memory intensive which is a major plus since our dataset is so huge.")
+        st.markdown("Our best perfoming solution to a movie recommender sytem was the collaborative filtering. We intergrated it with our best perfoming model which is the SVD model as seen in the graph below.")
+        st.subheader('A graph of Model Perfomances')
+        st.image('resources/imgs/Models.jpeg',use_column_width=True)
+        st.markdown('From the image above the SVD model perfomed best with an RMSE of 0.906 as compared to the other models.')
+        st.markdown('The singular value decomposition (SVD) provides another way to factorize a matrix, into singular vectors and singular values. The SVD allows us to discover some of the same kind of information as the eigen decomposition.The SVD is used widely both in the calculation of other matrix operations, such as matrix inverse, but also as a data reduction method in machine learning. SVD can also be used in least squares linear regression, image compression, and denoising data.')
 
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
